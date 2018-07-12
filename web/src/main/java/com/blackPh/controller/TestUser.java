@@ -20,12 +20,6 @@ public class TestUser {
     @Autowired
     private TbUserService tbUserService;
 
-    @RequestMapping("/")
-    public String test() {
-
-        return "index";
-    }
-
     @RequestMapping("/test")
     @ResponseBody
     public Result getUser() {

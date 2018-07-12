@@ -5,7 +5,7 @@
          id="WebApp_ID" version="2.5">
     <display-name>ashitaka</display-name>
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>swagger/index.html</welcome-file>
     </welcome-file-list>
     <!-- 解决post乱码 -->
     <filter>

@@ -1,0 +1,64 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
+
+    <!-- 数据库连接池 -->
+    <!-- 加载配置文件 -->
+    <context:property-placeholder location="classpath:properties/db.properties" />
+    <!-- 数据库连接池 -->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+          destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driverClass}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.user}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="maxActive" value="${jdbc.maxActive}"/>
+        <property name="minIdle" value="${jdbc.minIdle}"/>
+        <property name="initialSize" value="${jdbc.initialSize}"/>
+        <property name="validationQuery" value="SELECT 1" />
+        <property name="testOnBorrow" value="false" />
+        <property name="testOnReturn" value="false" />
+        <property name="testWhileIdle" value="true" />
+        <property name="timeBetweenEvictionRunsMillis" value="60000" />
+        <property name="minEvictableIdleTimeMillis" value="300000" />
+        <property name="defaultAutoCommit" value="true"/>
+        <property name="removeAbandoned" value="${druid.remove.abandoned}"/>
+        <property name="removeAbandonedTimeout" value="${druid.remove.abandoned.timeout}"/>
+        <property name="logAbandoned" value="true"/>
+        <property name="filters" value="stat" />
+        <property name="connectionProperties" value="${jdbc.connection.properties}"/>
+        <property name="maxWait" value="${jdbc.maxWait}"/>
+    </bean>
+
+    <!-- 让spring管理sqlsessionfactory 使用mybatis和spring整合包中的 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 数据库连接池  交由sqlSessionFactoryBean管理-->
+        <property name="dataSource" ref="dataSource" />
+        <!-- 加载mybatis的全局配置文件 交由sqlSessionFactoryBean管理-->
+        <property name="configLocation" value="classpath:mybatis/mybatis.xml" />
+        <!-- 加载mapper 映射文件 -->
+        <property name="mapperLocations" >
+            <list>
+                <value>classpath*:mappers/*.xml</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" ref="sqlSessionFactory" />
+    </bean>
+    <bean id="txdfc"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    <tx:annotation-driven proxy-target-class="true"
+                          transaction-manager="txdfc" />
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.blackPh.mapper" />
+    </bean>
+</beans>

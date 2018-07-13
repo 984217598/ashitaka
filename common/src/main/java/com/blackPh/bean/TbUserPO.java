@@ -17,4 +17,5 @@ public class TbUserPO {
     private String realName;
     @ApiModelProperty(value = "用户")
     private String passWord;
+
 }

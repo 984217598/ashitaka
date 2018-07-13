@@ -21,12 +21,17 @@
     </bean>
 
     <!-- 接口自动化文档 -->
-    <bean class="com.blackPh.swagger.SwaggerConfig" />
-    <bean class="com.mangofactory.swagger.configuration.SpringSwaggerConfig" />
+    <!--<bean class="com.blackPh.swagger.SwaggerConfig" />-->
+    <!--<bean class="com.mangofactory.swagger.configuration.SpringSwaggerConfig" />-->
+
+    <bean class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration" id="swagger2Config"/>
 
 
     <!-- 静态资源映射 -->
-    <mvc:resources mapping="swagger/**" location="/WEB-INF/swagger/"/>
+    <mvc:resources location="classpath:/META-INF/resources/" mapping="swagger-ui.html"/>
+    <mvc:resources location="classpath:/META-INF/resources/webjars/" mapping="/webjars/**"/>
+
+    <!--<mvc:resources mapping="swagger/**" location="/WEB-INF/swagger/"/>-->
     <!--<mvc:resources location="/WEB-INF/js/" mapping="/js/**"/>-->
     <!--<mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>-->
 </beans>

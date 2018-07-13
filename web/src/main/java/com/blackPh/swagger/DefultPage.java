@@ -4,7 +4,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import springfox.documentation.annotations.ApiIgnore;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
@@ -14,17 +16,16 @@ import javax.servlet.http.HttpServletResponse;
  * @create 2018-07-12 下午6:32
  **/
 @Controller
+@ApiIgnore()
 public class DefultPage {
     @RequestMapping("/api")
     public String showSwagger(HttpServletResponse response) {
-        ModelAndView modelAndView = new ModelAndView();
-        return "redirect:http://localhost:8010/swagger/index.html";
+        return "redirect:http://localhost:8010/swagger-ui.html#/";
     }
 
 //    @RequestMapping("/api")
-//    public ModelAndView showSwagger(RedirectAttributes attr) {
-//        return new ModelAndView("index");
-//
+//    public String showSwagger(HttpServletRequest request) {
+//        return "forward:/swagger";
 //    }
 
 }

@@ -95,20 +95,6 @@
         </dependency>
 
         <!-- swagger 相关包 -->
-        <!-- swagger-springmvc -->
-        <!--<dependency>-->
-            <!--<groupId>com.mangofactory</groupId>-->
-            <!--<artifactId>swagger-springmvc</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>com.mangofactory</groupId>-->
-            <!--<artifactId>swagger-models</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>com.wordnik</groupId>-->
-            <!--<artifactId>swagger-annotations</artifactId>-->
-        <!--</dependency>-->
-
         <!-- swagger-mvc -->
         <dependency>
             <groupId>io.springfox</groupId>

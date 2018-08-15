@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -22,4 +23,14 @@ public class UserTest {
 //        System.out.println(tbUser);
     }
 
+
+    @Test
+    public void test2() {
+        String value = "36700";
+        Long divide = 10000L;
+        int scale = 2;
+        BigDecimal divide1 = new BigDecimal(value).divide(new BigDecimal(divide), scale, BigDecimal.ROUND_UP);
+        long l = divide1.longValue();
+        System.out.println(l);
+    }
 }

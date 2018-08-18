@@ -18,4 +18,5 @@ public class BasicDo implements Serializable {
     private Date dateCreate;
     private Date updateCreate;
     private Date deleteCreate;
+    private Integer isDelete;
 }

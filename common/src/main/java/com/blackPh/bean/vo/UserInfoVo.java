@@ -14,10 +14,10 @@ import lombok.Data;
 public class UserInfoVo extends BasicDo{
     @ApiModelProperty("用户id")
     private String userId;
-    @ApiModelProperty("用户名")
+    @ApiModelProperty(value = "用户名", required = true)
     private String userName;
     @ApiModelProperty("头像")
     private String userImg;
-    @ApiModelProperty("帐号")
+    @ApiModelProperty(value = "帐号", required = true)
     private String userAccount;
 }

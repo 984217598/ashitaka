@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.blackPh.mapper.UserMapper">
+
+    <resultMap id="userInfoDto" type="com.blackPh.bean.dto.UserInfoDto">
+        <result property="id" column="id"/>
+        <result property="dateCreate" column="date_create"/>
+        <result property="updateCreate" column="update_create"/>
+        <result property="deleteCreate" column="delete_create"/>
+        <result property="userId" column="user_id"/>
+        <result property="userName" column="user_name"/>
+        <result property="userImg" column="user_img"/>
+        <result property="userAccount" column="user_account"/>
+        <result property="isDelete" column="is_delete"/>
+    </resultMap>
+
+    <sql id="all_userinfo">
+        id, date_create, update_create, delete_create, user_id, user_name, user_img, user_account, is_delete
+    </sql>
+
+    <select id="queryUserByUserAccount" resultType="com.blackPh.bean.dto.UserInfoDto">
+      select
+        <include refid="all_userinfo"/>
+      from user_info where user_account = #{userAccount} and is_delete = 0
+    </select>
+
+    <insert id="insertUserInfo" parameterType="com.blackPh.bean.dto.UserInfoDto">
+        INSERT INTO user_info
+          (id, update_create, user_id, user_name, user_img, user_account)
+        VALUES
+          (#{id},#{updateCreate}, #{userId}, #{userName}, #{userImg}, #{userAccount})
+    </insert>
+
+</mapper>

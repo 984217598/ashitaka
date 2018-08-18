@@ -8,12 +8,8 @@ import org.springframework.cglib.beans.BeanCopier;
 
 import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -25,8 +21,8 @@ import java.util.Set;
  * @author wang.hao
  * @create 2018-08-13 下午4:55
  **/
-public class BeanCopy {
-    private static final Logger LOGGER = LoggerFactory.getLogger(BeanCopy.class);
+public class BeanUtils {
+    private static final Logger LOGGER = LoggerFactory.getLogger(BeanUtils.class);
 
     /**
      *
@@ -43,7 +39,7 @@ public class BeanCopy {
                 copy.copy(source, target, null);
             }
         } catch (Exception e) {
-            LOGGER.error("BeanCopy.copy failed! params: {}",
+            LOGGER.error("BeanUtils.copy failed! params: {}",
                     "source = [" + source + "], target = [" + target + "], targetClazz = [" + targetClazz + "]", e);
         }
         return targetClazz.cast(source);
@@ -61,7 +57,7 @@ public class BeanCopy {
                 copy.copy(source, target, null);
             }
         } catch (Exception e) {
-            LOGGER.error("BeanCopy.copy failed! params: {}", "source = [" + source + "], target = [" + target + "]", e);
+            LOGGER.error("BeanUtils.copy failed! params: {}", "source = [" + source + "], target = [" + target + "]", e);
         }
     }
 
@@ -82,7 +78,7 @@ public class BeanCopy {
                 }
             }
         } catch (Exception e) {
-            LOGGER.error("BeanCopy.copy failed! params: {}",
+            LOGGER.error("BeanUtils.copy failed! params: {}",
                     "targetClazz = [" + targetClazz + "], target = [" + target + "], froms = [" + froms + "]", e);
         }
         return targetClazz.cast(target);
@@ -102,7 +98,7 @@ public class BeanCopy {
                 }
             }
         } catch (Exception e) {
-            LOGGER.error("BeanCopy.copy failed! params: {}", "target = [" + target + "], froms = [" + froms + "]", e);
+            LOGGER.error("BeanUtils.copy failed! params: {}", "target = [" + target + "], froms = [" + froms + "]", e);
         }
     }
 
@@ -128,7 +124,7 @@ public class BeanCopy {
             } catch (IntrospectionException ignore){
                 LOGGER.debug(ignore.getMessage());
             } catch (Exception e) {
-                LOGGER.error("BeanCopy.copyIgnoreNullValue failed! params: {}",
+                LOGGER.error("BeanUtils.copyIgnoreNullValue failed! params: {}",
                         "source = [" + source + "], target = [" + target + "]", e);
             }
         }
@@ -161,7 +157,7 @@ public class BeanCopy {
 
             }
         } catch (Exception e) {
-            LOGGER.error("BeanCopy.getAllFields failed! params: {}", "t = [" + t + "]", e);
+            LOGGER.error("BeanUtils.getAllFields failed! params: {}", "t = [" + t + "]", e);
         }
         return fields;
     }
@@ -200,7 +196,7 @@ public class BeanCopy {
 //            beanUtilsBean.copyProperties(to, from);
 //            beanUtilsBean.clearIgnoreNull();
 //        } catch (Exception e) {
-//            LOGGER.error("BeanCopy.beanUtilsCopy failed! params: {}",
+//            LOGGER.error("BeanUtils.beanUtilsCopy failed! params: {}",
 //                    "to = [" + to + "], from = [" + from + "], ignoreProperties = [" + ignoreProperties + "]", e);
 //        }
 //    }
@@ -212,7 +208,7 @@ public class BeanCopy {
 //            beanUtilsBean.copyProperties(to, from);
 //            beanUtilsBean.clearIgnoreNull();
 //        } catch (Exception e) {
-//            LOGGER.error("BeanCopy.beanUtilsCopyNotIgnoreNull failed! params: {}",
+//            LOGGER.error("BeanUtils.beanUtilsCopyNotIgnoreNull failed! params: {}",
 //                    "to = [" + to + "], from = [" + from + "], ignoreProperties = [" + ignoreProperties + "]", e);
 //        }
 //    }
@@ -279,5 +275,13 @@ public class BeanCopy {
         }
         String[] result = new String[emptyNames.size()];
         return emptyNames.toArray(result);
+    }
+
+    public static boolean isNotEmpty(Object obj) {
+        return null != obj;
+    }
+
+    public static boolean isEmpty(Object obj) {
+        return null == obj;
     }
 }

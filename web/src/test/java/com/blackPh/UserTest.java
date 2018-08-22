@@ -14,6 +14,8 @@ import java.util.UUID;
  * @author wang.hao
  * @create 2018-07-12 下午2:33
  **/
+
+
 public class UserTest{
 
     @Autowired

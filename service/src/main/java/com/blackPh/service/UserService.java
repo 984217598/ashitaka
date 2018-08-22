@@ -13,4 +13,6 @@ public interface UserService {
     UserInfoVo queryUserByUserAccount(String userAccount);
 
     Boolean insertUser(UserInfoVo userInfoVo);
+
+    Boolean updateUser(UserInfoVo userInfoVo);
 }

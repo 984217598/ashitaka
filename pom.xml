@@ -23,7 +23,7 @@
         <mybatis.paginator.version>1.2.15</mybatis.paginator.version>
         <mysql.version>5.1.32</mysql.version>
         <slf4j.version>1.6.4</slf4j.version>
-        <jackson.version>2.4.2</jackson.version>
+        <jackson.version>2.9.5</jackson.version>
         <druid.version>1.0.9</druid.version>
         <httpclient.version>4.3.5</httpclient.version>
         <joda-time.version>2.5</joda-time.version>
@@ -70,7 +70,7 @@
             <dependency>
                 <groupId>com.fasterxml</groupId>
                 <artifactId>classmate</artifactId>
-                <version>1.1.0</version>
+                <version>1.4.0</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
@@ -107,6 +107,11 @@
                 <scope>test</scope>
             </dependency>
             <!-- 日志处理 -->
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>1.2</version>
+            </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-log4j12</artifactId>
@@ -181,6 +186,7 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-test</artifactId>
                 <version>${spring.version}</version>
+                <scope>provided</scope>
             </dependency>
 
             <!-- JSP相关 -->

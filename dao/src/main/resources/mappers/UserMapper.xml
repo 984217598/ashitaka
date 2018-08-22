@@ -15,7 +15,8 @@
     </resultMap>
 
     <sql id="all_userinfo">
-        id, date_create, update_create, delete_create, user_id, user_name, user_img, user_account, is_delete
+        id, date_create dateCreate, update_create updateCreate, delete_create deleteCreate,
+        user_id userId, user_name userName, user_img userImg, user_account userAccount, is_delete isDelete
     </sql>
 
     <select id="queryUserByUserAccount" resultType="com.blackPh.bean.dto.UserInfoDto">
@@ -30,5 +31,36 @@
         VALUES
           (#{id},#{updateCreate}, #{userId}, #{userName}, #{userImg}, #{userAccount})
     </insert>
+
+    <update id="updateUserInfo" parameterType="com.blackPh.bean.dto.UserInfoDto">
+        UPDATE user_info SET
+        <if test="dateCreate != null">
+            date_create = #{dateCreate},
+        </if>
+        <if test="updateCreate != null">
+            update_create = #{updateCreate},
+        </if>
+        <if test="deleteCreate != null">
+            delete_create = #{deleteCreate},
+        </if>
+        <if test="isDelete != null">
+            is_delete = #{isDelete},
+        </if>
+        <if test="userId != null">
+            user_id = #{userId},
+        </if>
+        <if test="userName != null">
+            user_name = #{userName},
+        </if>
+        <if test="userImg != null">
+            user_img = #{userImg},
+        </if>
+        <if test="userAccount != null">
+            user_account = #{userAccount},
+        </if>
+        1 = 1
+        WHERE
+        id = #{id}
+    </update>
 
 </mapper>

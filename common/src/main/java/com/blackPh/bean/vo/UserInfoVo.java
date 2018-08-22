@@ -11,7 +11,8 @@ import lombok.Data;
  * @create 2018-08-13 下午4:43
  **/
 @Data
-public class UserInfoVo extends BasicDo{
+public class UserInfoVo {
+    private String id;
     @ApiModelProperty("用户id")
     private String userId;
     @ApiModelProperty(value = "用户名", required = true)
@@ -20,4 +21,5 @@ public class UserInfoVo extends BasicDo{
     private String userImg;
     @ApiModelProperty(value = "帐号", required = true)
     private String userAccount;
+    private Integer isDelete;
 }

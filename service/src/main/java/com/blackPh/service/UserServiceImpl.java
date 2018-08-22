@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -62,6 +63,22 @@ public class UserServiceImpl implements UserService {
             userMapper.insertUserInfo(accept);
         } catch (Exception e) {
             LOGGER.error("添加用户信息异常。");
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public Boolean updateUser(UserInfoVo userInfoVo) {
+        if (BeanUtils.isEmpty(userInfoVo)) {
+            return false;
+        }
+        try {
+            UserInfoDto accept = accept(userInfoVo);
+            accept.setUpdateCreate(new Date());
+            userMapper.updateUserInfo(accept);
+        } catch (Exception e) {
+            LOGGER.error("更新用户信息失败。");
             return false;
         }
         return true;

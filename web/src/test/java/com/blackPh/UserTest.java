@@ -14,7 +14,7 @@ import java.util.UUID;
  * @author wang.hao
  * @create 2018-07-12 下午2:33
  **/
-public class UserTest extends BaseTest {
+public class UserTest{
 
     @Autowired
     private UserMapper userMapper;
@@ -30,24 +30,24 @@ public class UserTest extends BaseTest {
     }
 
 
-    @Test
-    public void test2() {
-        String value = "36700";
-        Long divide = 10000L;
-        int scale = 2;
-        BigDecimal divide1 = new BigDecimal(value).divide(new BigDecimal(divide), scale, BigDecimal.ROUND_UP);
-        long l = divide1.longValue();
-        System.out.println(l);
-    }
-
-
-
-    @Test
-    public void test3() {
-        UserInfoVo userInfoVo = new UserInfoVo();
-        userInfoVo.setUserName("ashidaka");
-        userInfoVo.setUserAccount("123536536258");
-        Boolean aBoolean = userService.insertUser(userInfoVo);
-        System.out.println(aBoolean);
-    }
+//    @Test
+//    public void test2() {
+//        String value = "36700";
+//        Long divide = 10000L;
+//        int scale = 2;
+//        BigDecimal divide1 = new BigDecimal(value).divide(new BigDecimal(divide), scale, BigDecimal.ROUND_UP);
+//        long l = divide1.longValue();
+//        System.out.println(l);
+//    }
+//
+//
+//
+//    @Test
+//    public void test3() {
+//        UserInfoVo userInfoVo = new UserInfoVo();
+//        userInfoVo.setUserName("ashidaka");
+//        userInfoVo.setUserAccount("123536536258");
+//        Boolean aBoolean = userService.insertUser(userInfoVo);
+//        System.out.println(aBoolean);
+//    }
 }

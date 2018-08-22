@@ -5,7 +5,11 @@ import com.blackPh.mapper.UserMapper;
 import com.blackPh.service.UserService;
 import com.blackPh.utils.UUIDUtils;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 
 import java.math.BigDecimal;
 import java.util.UUID;
@@ -15,7 +19,9 @@ import java.util.UUID;
  * @create 2018-07-12 下午2:33
  **/
 
-
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {"classpath:applicationContext.xml", "classpath:applicationContext-*.xml"})
+@WebAppConfiguration
 public class UserTest{
 
     @Autowired

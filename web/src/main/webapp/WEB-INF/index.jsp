@@ -11,6 +11,6 @@
 
 </head>
 <body>
-    <a>http://localhost:8010/swagger/index.html</a>
+
 </body>
 </html>

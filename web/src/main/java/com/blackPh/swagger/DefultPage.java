@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 public class DefultPage {
     @RequestMapping("/api")
     public String showSwagger(HttpServletResponse response) {
+
         return "redirect:http://localhost:8010/swagger-ui.html#/";
     }
 

@@ -30,11 +30,10 @@ public class ProvincesController {
     @RequestMapping("/getProvinceAll")
     @ResponseBody
     public Result<List<ProvincesVo>> getProvinceAll() {
-        List<TArea> tArea = provinceService.getAllProvinces();
+        List<ProvincesVo> allProvinces = provinceService.getAllProvinces();
 
 
-
-        return Result.success();
+        return Result.success(allProvinces);
     }
 
 

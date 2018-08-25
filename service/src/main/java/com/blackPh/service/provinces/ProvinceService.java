@@ -1,6 +1,7 @@
 package com.blackPh.service.provinces;
 
 import com.blackPh.bean.dto.TArea;
+import com.blackPh.bean.vo.ProvincesVo;
 
 import java.util.List;
 
@@ -11,6 +12,6 @@ import java.util.List;
  **/
 public interface ProvinceService {
 
-    List<TArea> getAllProvinces();
+    List<ProvincesVo> getAllProvinces();
 
 }

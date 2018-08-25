@@ -11,4 +11,7 @@ import java.util.List;
  **/
 public interface ProvinceMapper {
     List<TArea> searchAllProvince();
+
+    List<TArea> searchAll();
+
 }

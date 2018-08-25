@@ -2,6 +2,7 @@ package com.blackPh.controller.provinces;
 
 import com.blackPh.bean.Result;
 import com.blackPh.bean.dto.TArea;
+import com.blackPh.bean.vo.ProvincesVo;
 import com.blackPh.mapper.Provinces.ProvinceMapper;
 import com.blackPh.service.provinces.ProvinceService;
 import io.swagger.annotations.Api;
@@ -28,9 +29,12 @@ public class ProvincesController {
     @ApiOperation(value = "查询所有省份", httpMethod = "PUT")
     @RequestMapping("/getProvinceAll")
     @ResponseBody
-    public Result<?> getProvinceAll() {
+    public Result<List<ProvincesVo>> getProvinceAll() {
         List<TArea> tArea = provinceService.getAllProvinces();
-        return Result.success(tArea);
+
+
+
+        return Result.success();
     }
 
 

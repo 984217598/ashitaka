@@ -1,6 +1,7 @@
 package com.blackPh.bean.vo;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
 import java.util.List;
 
@@ -9,6 +10,7 @@ import java.util.List;
  *  @author  wang.hao
  *  @create 2018-08-25 12:03
  **/
+@Data
 public class ProvincesVo {
     @ApiModelProperty("地区Id")
     private Integer areaId;

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.blackPh.mapper.activity.ActivityMapper">
+
+    <resultMap id="ActivityInfoDto" type="com.blackPh.bean.dto.ActivityInfoDto">
+        <result property="id" column="id"/>
+        <result property="dateCreate" column="date_create"/>
+        <result property="updateCreate" column="update_create"/>
+        <result property="deleteCreate" column="delete_create"/>
+        <result property="title" column="title"/>
+        <result property="address" column="address"/>
+        <result property="provinceCode" column="province_code"/>
+        <result property="province" column="province"/>
+        <result property="cityCode" column="city_code"/>
+        <result property="city" column="city"/>
+        <result property="countyCode" column="county_code"/>
+        <result property="county" column="county"/>
+        <result property="startACTime" column="start_ACtime"/>
+        <result property="endACTime" column="end_ACtime"/>
+        <result property="startSUTime" column="start_SUtime"/>
+        <result property="endSUTime" column="end_SUtime"/>
+        <result property="content" column="content"/>
+        <result property="imgAC" column="img_AC"/>
+        <result property="enrolment" column="enrolment"/>
+        <result property="labelCode" column="label_code"/>
+        <result property="label" column="label"/>
+        <result property="isDelete" column="is_delete"/>
+    </resultMap>
+
+    <sql id="all_activity">
+        id, date_create dateCreate, update_create updateCreate, delete_create deleteCreate,
+        title title, address address, province_code provinceCode, province province, city_code countyCode,
+        county county, start_ACtime startACTime, end_ACtime endACTime, start_SUtime startSUTime,
+        end_SUtime endSUTime, content content, img_AC imgAC, enrolment enrolment, label_code labelCode,
+        label label, is_delete isDelete
+    </sql>
+
+    <select id="queryUserByUserAccount" resultType="com.blackPh.bean.dto.UserInfoDto">
+        select
+        <include refid="all_activity"/>
+        from user_info where user_account = #{userAccount} and is_delete = 0
+    </select>
+
+    <insert id="insterActivity" parameterType="com.blackPh.bean.dto.ActivityInfoDto">
+        INSERT INTO activity_info
+          (id, date_create, update_create, delete_create, title, address, province_code, province, city_code, city,
+           county_code, county, start_ACtime, end_ACtime, start_SUtime, end_SUtime, content, img_AC, enrolment, label_code,
+           label, is_delete)
+        VALUES
+          (#{id},#{dateCreate},#{updateCreate},#{deleteCreate},#{title},#{address},#{provinceCode},#{province},#{cityCode},#{city},#{countyCode},#{county},#{startACTime},#{endACTime},#{startSUTime},#{endSUTime},#{content},#{imgAC},#{enrolment},#{labelCode},#{label},#{isDelete}  )
+    </insert>
+
+    <update id="updateUserInfo" parameterType="com.blackPh.bean.dto.UserInfoDto">
+        UPDATE user_info SET
+        <if test="dateCreate != null">
+            date_create = #{dateCreate},
+        </if>
+        <if test="updateCreate != null">
+            update_create = #{updateCreate},
+        </if>
+        <if test="deleteCreate != null">
+            delete_create = #{deleteCreate},
+        </if>
+        <if test="isDelete != null">
+            is_delete = #{isDelete},
+        </if>
+        <if test="userId != null">
+            user_id = #{userId},
+        </if>
+        <if test="userName != null">
+            user_name = #{userName},
+        </if>
+        <if test="userImg != null">
+            user_img = #{userImg},
+        </if>
+        <if test="userAccount != null">
+            user_account = #{userAccount},
+        </if>
+        1 = 1
+        WHERE
+        id = #{id}
+    </update>
+
+</mapper>

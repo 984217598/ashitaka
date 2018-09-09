@@ -2,6 +2,7 @@ package com.blackPh.bean.vo;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
 import java.util.Date;
 
@@ -12,6 +13,7 @@ import java.util.Date;
  * @create 2018-08-28 0:11
  **/
 @Api
+@Data
 public class ActivityVo {
     @ApiModelProperty("id")
     private String id;

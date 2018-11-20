@@ -23,4 +23,5 @@ public class DefultPage {
         return "redirect:http://localhost:8080/swagger-ui.html#/";
     }
 
+
 }

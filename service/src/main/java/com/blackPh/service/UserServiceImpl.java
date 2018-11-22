@@ -59,8 +59,8 @@ public class UserServiceImpl implements UserService {
             String id32 = UUIDUtils.getID32();
             userInfoVo.setId(id32);
             userInfoVo.setUserId(id10);
-            UserInfoDto accept = accept(userInfoVo);
-            userMapper.insertUserInfo(accept);
+//            UserInfoDto accept = accept(userInfoVo);
+            userMapper.insertUserInfo(accept(userInfoVo));
         } catch (Exception e) {
             LOGGER.error("添加用户信息异常。");
             return false;

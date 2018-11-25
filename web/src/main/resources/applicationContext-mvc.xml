@@ -7,31 +7,13 @@
 	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <!-- 视图解析器 -->
-    <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
-        <!--<property name="prefix" value="/swagger/"/>-->
-        <!--<property name="suffix" value=".html"/>-->
-    <!--</bean>-->
-    <bean id="viewResolver"
-          class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="viewClass"
-                  value="org.springframework.web.servlet.view.JstlView" />
-        <property name="prefix" value="/swagger/" />
-        <property name="suffix" value=".html"></property>
-    </bean>
-
-    <!-- 接口自动化文档 -->
-    <!--<bean class="com.blackPh.swagger.SwaggerConfig" />-->
-    <!--<bean class="com.mangofactory.swagger.configuration.SpringSwaggerConfig" />-->
-
-    <bean class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration" id="swagger2Config"/>
-
+    <mvc:default-servlet-handler/>
 
     <!-- 静态资源映射 -->
     <mvc:resources location="classpath:/META-INF/resources/" mapping="swagger-ui.html"/>
     <mvc:resources location="classpath:/META-INF/resources/webjars/" mapping="/webjars/**"/>
 
-    <!--<mvc:resources mapping="swagger/**" location="/WEB-INF/swagger/"/>-->
-    <!--<mvc:resources location="/WEB-INF/js/" mapping="/js/**"/>-->
-    <!--<mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>-->
+    <!-- 添加扫描配置类 -->
+    <bean class="com.blackPh.swagger.ApiConfig" />
+
 </beans>

@@ -30,9 +30,9 @@ public class TestUser {
     @ApiOperation(value = "测试方法。", httpMethod = "GET")
     public Result getUser(@ApiParam("参数")
                           @RequestParam(value = "userId", required = true) String id) {
-        List<TbUserPO> user = tbUserService.getUser();
+//        List<TbUserPO> user = tbUserService.getUser();
 
-        return Result.success(user);
+        return Result.success(id);
     }
 
 }

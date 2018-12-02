@@ -33,6 +33,10 @@ public class ApiConfig extends WebMvcConfigurationSupport {
                 .apiInfo(apiInfo());
     }
 
+    /**
+     *      阿里云：http://47.98.111.225
+     *      black 战神Z7 ： http://192.168.1.4
+     */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("ashitaka 接口列表")

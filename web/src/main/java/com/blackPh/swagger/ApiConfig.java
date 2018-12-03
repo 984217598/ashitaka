@@ -41,7 +41,7 @@ public class ApiConfig extends WebMvcConfigurationSupport {
         return new ApiInfoBuilder()
                 .title("ashitaka 接口列表")
                 .description("ashitaka Api")
-                .termsOfServiceUrl("http://47.98.111.225:8080/swagger-ui.html")
+                .termsOfServiceUrl("http://47.98.111.225:8080/ashitaka/swagger-ui.html")
                 .version("1.0.0")
                 .build();
     }

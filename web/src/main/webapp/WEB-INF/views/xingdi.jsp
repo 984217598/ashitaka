@@ -54,17 +54,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div id="main">
     <div>
         <%--<img src="<%=request.getContextPath()%>/images/head.jpg">--%>
-        <img src="47.101.32.176：8080/ashitaka/images/head.jpg">
-        <img src="47.101.32.176：8080/ashitaka/images/content.jpg">
+        <img src="47.101.32.176:8080/ashitaka/images/head.jpg">
+        <img src="47.101.32.176:8080/ashitaka/images/content.jpg">
     </div>
 
     <div id="btn">
         <a
                 href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI2MDU2NjgxNQ==&scene=126&bizpsid=0#wechat_redirect">
-            <img src="47.101.32.176：8080/ashitaka/images/follow.png" alt="">
+            <img src="47.101.32.176:8080/ashitaka/images/follow.png" alt="">
         </a>
         <a href="http://www.xingdijiu.com/">
-            <img src="47.101.32.176：8080/ashitaka/images/website.png" alt="">
+            <img src="47.101.32.176:8080/ashitaka/images/website.png" alt="">
         </a>
     </div>
 </div>

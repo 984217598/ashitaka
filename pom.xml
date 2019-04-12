@@ -16,7 +16,7 @@
     </modules>
 
     <name>ashitaka</name>
-    
+
     <properties>
         <junit.version>4.12</junit.version>
         <spring.version>4.3.2.RELEASE</spring.version>
@@ -308,6 +308,7 @@
                 <configuration>
                     <username>admin</username>
                     <password>admin</password>
+                    <path>/ashitaka</path>
                     <url>http://localhost:8080/manager/text</url>
                     <uriEncoding>UTF-8</uriEncoding>
                 </configuration>

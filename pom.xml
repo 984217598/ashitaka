@@ -310,6 +310,7 @@
                     <password>admin</password>
                     <path>/ashitaka</path>
                     <url>http://localhost:8080/manager/text</url>
+                    <server>tomcat7</server>
                     <uriEncoding>UTF-8</uriEncoding>
                 </configuration>
             </plugin>

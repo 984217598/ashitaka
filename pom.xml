@@ -46,6 +46,7 @@
         <servlet-api.version>2.5</servlet-api.version>
         <jsp-api.version>2.0</jsp-api.version>
         <swagger.version>2.4.0</swagger.version>
+        <project.encoding>utf-8</project.encoding>
     </properties>
 
     <dependencyManagement>

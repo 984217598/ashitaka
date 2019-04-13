@@ -31,7 +31,7 @@
 
         #btn {
             position: fixed;
-            bottom: 15px;
+            bottom: 17px;
             left: 0px;
             width: 100%;
             display: flex;

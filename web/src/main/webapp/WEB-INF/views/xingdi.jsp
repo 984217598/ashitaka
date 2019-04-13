@@ -31,7 +31,7 @@
 
         #btn {
             position: fixed;
-            bottom: 10px;
+            bottom: 15px;
             left: 0px;
             width: 100%;
             display: flex;
@@ -40,7 +40,7 @@
 
         #btn a {
             display: inline-block;
-            width: 100px;
+            width: 36%;
             border-radius: 5px;
             /* background-color: #fff; */
             box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.36);

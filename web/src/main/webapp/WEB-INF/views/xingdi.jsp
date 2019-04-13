@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>河北庆昇源酿酒有限公司</title>
     <style>
         * {
             margin: 0;
@@ -31,7 +31,7 @@
 
         #btn {
             position: fixed;
-            bottom: 30px;
+            bottom: 10px;
             left: 0px;
             width: 100%;
             display: flex;
@@ -41,7 +41,9 @@
         #btn a {
             display: inline-block;
             width: 100px;
-            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+            border-radius: 5px;
+            /* background-color: #fff; */
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.36);
         }
 
         #btn a img {
@@ -53,8 +55,12 @@
 <body>
 <div id="main">
     <div>
-        <img src="<%=basePath%>/images/head.jpg">
-        <img src="<%=basePath%>/images/content.jpg">
+        <img src="<%=basePath%>/images/1页.jpg">
+        <img src="<%=basePath%>/images/2页.jpg">
+        <img src="<%=basePath%>/images/3页.jpg">
+        <img src="<%=basePath%>/images/4页.jpg">
+        <img src="<%=basePath%>/images/5页.jpg">
+        <img src="<%=basePath%>/images/6页.jpg">
     </div>
 
     <div id="btn">

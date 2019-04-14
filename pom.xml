@@ -27,7 +27,6 @@
         <slf4j.version>1.6.4</slf4j.version>
         <jackson.version>2.9.5</jackson.version>
         <druid.version>1.0.9</druid.version>
-        <httpclient.version>4.3.5</httpclient.version>
         <joda-time.version>2.5</joda-time.version>
         <commons-lang3.version>3.3.2</commons-lang3.version>
         <commons-io.version>1.3.2</commons-io.version>
@@ -94,9 +93,15 @@
             <!-- httpclient -->
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
-                <artifactId>httpclient</artifactId>
-                <version>${httpclient.version}</version>
+                <artifactId>httpcore</artifactId>
+                <version>4.4.3</version>
             </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>4.5.1</version>
+            </dependency>
+
             <!-- quartz任务调度框架 -->
             <dependency>
                 <groupId>org.quartz-scheduler</groupId>
@@ -161,6 +166,13 @@
                 <artifactId>spring-beans</artifactId>
                 <version>${spring.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring.version}</version>
+                <scope>compile</scope>
+            </dependency>
+
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-webmvc</artifactId>
@@ -276,6 +288,14 @@
                 <version>2.6.1</version>
             </dependency>
 
+            <!-- com.alibaba/fastjson -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.47</version>
+            </dependency>
+
+
             <!-- swagger 相关包 -->
             <!-- swagger-mvc -->
             <dependency>
@@ -295,6 +315,16 @@
                 <artifactId>xmlbeans</artifactId>
                 <version>2.6.0</version>
             </dependency>
+
+            <!-- oss -->
+            <dependency>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>2.7.0</version>
+            </dependency>
+
+
+
 
         </dependencies>
     </dependencyManagement>

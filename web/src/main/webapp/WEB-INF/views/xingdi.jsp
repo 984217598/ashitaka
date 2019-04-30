@@ -70,6 +70,10 @@
         <a href="http://www.xingdijiu.com/">
             <img src="https://blackph.oss-cn-hangzhou.aliyuncs.com/website.png" alt="">
         </a>
+
+        <a href="http://anshun.m.chenzhongtech.com/fw/photo/3xafna8t5csuxdq?fid=1338604017&cc=share_wxms&groupName=E_1_181030224046340_G_1&appType=1&docId=231&photoId=3xafna8t5csuxdq&shareId=15720079250&shareToken=X39jmcyYUgMC_6d1L6V4OhRE1ur&userId=3xb6yi5mp6ihwi6&shareType=1&et=1_i%2F1632238440846467077_f0&timestamp=1556623887365">
+            <img src="https://blackph.oss-cn-hangzhou.aliyuncs.com/%E7%9B%B4%E6%92%AD%E6%8C%89%E9%92%AE.png" alt="">
+        </a>
     </div>
 </div>
 </body>

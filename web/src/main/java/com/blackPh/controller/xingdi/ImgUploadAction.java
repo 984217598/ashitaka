@@ -34,11 +34,11 @@ public class ImgUploadAction {
     public String headImgUpload(HttpServletRequest request, MultipartFile file) {
         Map<String, Object> value = Maps.newHashMap();
         try {
-            String url = imgUploadService.updateHead(file);
-            LOGGER.info("图片路径{}",url);
-            value.put("data", url);
-            value.put("code", 0);
-            value.put("msg", "图片上传成功");
+////            String url = imgUploadService.updateHead(file);
+//            LOGGER.info("图片路径{}",url);
+//            value.put("data", url);
+//            value.put("code", 0);
+//            value.put("msg", "图片上传成功");
         } catch (Exception e) {
             e.printStackTrace();
             value.put("code", 2000);

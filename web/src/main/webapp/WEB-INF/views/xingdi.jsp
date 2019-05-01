@@ -77,24 +77,24 @@
 <body>
 <div id="main">
     <div>
-        <img src="./images/1页.jpg">
-        <img src="./images/2页.jpg">
-        <img src="./images/3页.jpg">
-        <img src="./images/4页.jpg">
-        <img src="./images/5页.jpg">
-        <img src="./images/6页.jpg">
+        <img src="https://blackph.oss-cn-hangzhou.aliyuncs.com/1%E9%A1%B5.jpg">
+        <img src="https://blackph.oss-cn-hangzhou.aliyuncs.com/2%E9%A1%B5.jpg">
+        <img src="https://blackph.oss-cn-hangzhou.aliyuncs.com/3%E9%A1%B5.jpg">
+        <img src="https://blackph.oss-cn-hangzhou.aliyuncs.com/4%E9%A1%B5.jpg">
+        <img src="https://blackph.oss-cn-hangzhou.aliyuncs.com/5%E9%A1%B5.jpg">
+        <img src="https://blackph.oss-cn-hangzhou.aliyuncs.com/6%E9%A1%B5.jpg">
     </div>
 
     <div id="btn">
         <a
                 href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI2MDU2NjgxNQ==&scene=126&bizpsid=0#wechat_redirect">
-            <img src="./images/follow.png" alt="">
+            <img src="https://blackph.oss-cn-hangzhou.aliyuncs.com/follow.png" alt="">
         </a>
         <a href="javascript:;" id="liveBtn">
             <img src="http://blackph.oss-cn-hangzhou.aliyuncs.com/%E7%9B%B4%E6%92%AD%E6%8C%89%E9%92%AE.png" alt="">
         </a>
         <a href="http://www.xingdijiu.com/">
-            <img src="./images/website.png" alt="">
+            <img src="https://blackph.oss-cn-hangzhou.aliyuncs.com/website.png" alt="">
         </a>
     </div>
 

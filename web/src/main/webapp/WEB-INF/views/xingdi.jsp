@@ -140,7 +140,7 @@
     </div>
 </div>
 <div id="scan" class="hide">
-    <img id="scanImg" src="http://blackph.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190501200115.png" alt="">
+    <img id="scanImg" src="https://blackph.oss-cn-hangzhou.aliyuncs.com/guanzhu.png" alt="">
 </div>
 </body>
 

@@ -131,7 +131,7 @@
                 href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI2MDU2NjgxNQ==&scene=126&bizpsid=0#wechat_redirect">
             <img src="https://blackph.oss-cn-hangzhou.aliyuncs.com/follow.png" alt="">
         </a>
-        <a href="javascript:;" id="liveBtn" data-clipboard-text="这个作者太有才，看他的视频根本停不下来~ http://bazhong.s.gifshow.com/s/I2Pp5Add">
+        <a href="javascript:;" id="liveBtn" data-clipboard-text="这个作者太有才，看他的视频根本停不下来~ http://www.gifshow.com/s/sUS4Dha9">
             <img src="http://blackph.oss-cn-hangzhou.aliyuncs.com/%E7%9B%B4%E6%92%AD%E6%8C%89%E9%92%AE.png" alt="">
         </a>
         <a href="http://www.xingdijiu.com/">

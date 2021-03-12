@@ -134,7 +134,7 @@
         <a href="javascript:;" id="liveBtn" data-clipboard-text="看了这么多快手，还是「庆昇源酒业」最好玩了！ http://kpfshanghai.m.chenzhongtech.com/s/1zmvJbr5 复制此链接，打开【快手】直接观看！">
             <img src="http://blackph.oss-cn-hangzhou.aliyuncs.com/%E7%9B%B4%E6%92%AD%E6%8C%89%E9%92%AE.png" alt="">
         </a>
-        <a href="http://www.xingdijiu.com/">
+        <a href="http://www.hebqsy.com/">
             <img src="https://blackph.oss-cn-hangzhou.aliyuncs.com/website.png" alt="">
         </a>
     </div>
